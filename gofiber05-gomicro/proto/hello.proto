@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package myproto;
+
+option go_package = "./hello";
+
+//定义服务
+service HelloService{
+  //一个打招呼的函数
+  rpc SayHello(HelloReq) returns (HelloResp){}
+  //一个说名字的服务
+  rpc SayName(NameReq) returns (NameResp){}
+
+}
+
+//定义数据结构
+//客户端发送给服务端
+message HelloReq{
+  string name = 1;
+}
+
+//服务端返回给客户端
+message HelloResp{
+  string msg = 1;
+}
+
+//客户端发送给服务端
+message NameReq{
+  string name = 1;
+}
+
+//服务端返回给客户端
+message NameResp{
+  string msg = 1;
+}

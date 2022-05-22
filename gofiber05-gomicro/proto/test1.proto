@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "./testpackage";
+
+//使用protocol buffer 编译器来运行 .proto文件时，编译器根据选择的语言生成对应的语言代码
+
+////熊猫发送的消息
+//message PandaRequest{
+//  string name = 1; //姓名
+//  int32 height = 2; //身高
+//  repeated int32 weight = 3; //体重
+//}
+//
+////熊猫的返回消息
+//message PandaResponse{
+//  int32 error = 1;
+//  string ermessage = 2;
+//}
+
+message Test{
+  string name =1;
+  repeated int32 weight = 2;
+  int32 height = 3;
+  string motto = 4;
+}
