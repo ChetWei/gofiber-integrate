@@ -48,7 +48,7 @@ go语言自带了rpc依赖
 
 安装protoc-gen-go 插件
 
-编写proto文件
+编写proto文件 
 
 ```protobuf
 message Test{
